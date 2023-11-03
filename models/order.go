@@ -1,5 +1,8 @@
 package models
 
+import "gorm.io/gorm"
+
 type Order struct {
-	Items []Purchase
+	gorm.Model
+	Items []Purchase `json:""`
 }

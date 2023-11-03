@@ -1,9 +1,12 @@
 package models
 
+import "gorm.io/gorm"
+
 type Item struct {
-	Id           string
-	Name         string
-	Description  string
-	isVeggie     bool
-	isGlutenFree bool
+	gorm.Model
+	Id           string `json:""`
+	Name         string `json:""`
+	Description  string `json:""`
+	isVeggie     bool   `json:""`
+	isGlutenFree bool   `json:""`
 }

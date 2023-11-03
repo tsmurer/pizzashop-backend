@@ -1,10 +1,13 @@
 package models
 
+import "gorm.io/gorm"
+
 type User struct {
-	Id        string
-	FirstName string
-	LastName  string
-	Addresses []Address
+	gorm.Model
+	Id        string    `json:""`
+	FirstName string    `json:""`
+	LastName  string    `json:""`
+	Addresses []Address `json:""`
 }
 
 func NewUser(firstName, lastName string) *User {
